@@ -2,7 +2,7 @@ name: Twitter Bot Auto Post - cardiggannjoki
 
 on:
   schedule:
-    - cron: "0 */4 * * *"  # Jalan tiap 4 jam
+    - cron: "0 */3 * * *"  # Jalan tiap 3 jam
   workflow_dispatch:        # Bisa juga dijalankan manual
 
 jobs:
