@@ -13,14 +13,13 @@ const client = new TwitterApi({
   try {
     // 📝 Isi tweet kamu di sini (nanti aku bantu isi sesuai request kamu)
     const textTweet = `
-open joki sesuai budget 𐙚 📚 ☁︎｡
+open joki sesuai budget all spess 24/7 𐙚 📚 ☁︎｡
 
-tugas soal, skripsi, makalah, jurnal, PPT:
-Akuntansi, Pajak, Ekonomi
+tugas soal, skripsi, makalah, proposal, jurnal, laporan, PPT, MYOB, ABSS, Brevet, coding, dll.
 
-TOEFL, TOEIC, MYOB, ABSS, Brevet 
+AVAIL SEMUA MATPEL/MATKUL ‼️
 
-*promo joki sertifikasi Accurate Online (CAP): joki berdua diskon 50rb! ✨
+*promo sertifikasi CAP cek bio ✨
 `;
 
     // 📸 Upload 1 gambar dari repo
@@ -37,4 +36,5 @@ TOEFL, TOEIC, MYOB, ABSS, Brevet
     console.error('❌ Gagal kirim tweet:', error);
   }
 })();
+
 
