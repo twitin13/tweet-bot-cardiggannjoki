@@ -13,13 +13,13 @@ const client = new TwitterApi({
   try {
     // 📝 Isi tweet kamu di sini (nanti aku bantu isi sesuai request kamu)
     const textTweet = `
-open joki sesuai budget all spess 24/7 𐙚 📚 ☁︎｡
+Open joki sesuai budget all spess 24/7 𐙚 📚 ☁︎｡
 
-tugas soal, skripsi, makalah, proposal, jurnal, laporan, PPT, MYOB, ABSS, Brevet, coding, dll.
+tugas soal, skripsi, makalah, proposal, jurnal, laporan, PPT, MYOB, ABSS, Zahir, Brevet Pajak, SAP, BNSP, TOEIC, TOEFL, dll.
 
 AVAIL SEMUA MATPEL/MATKUL ‼️
 
-*promo sertifikasi CAP cek bio ✨
+*promo sertifikasi Accurate CAP cek bio ✨ 
 `;
 
     // 📸 Upload 1 gambar dari repo
@@ -36,5 +36,6 @@ AVAIL SEMUA MATPEL/MATKUL ‼️
     console.error('❌ Gagal kirim tweet:', error);
   }
 })();
+
 
 
