@@ -13,13 +13,12 @@ const client = new TwitterApi({
   try {
     // 📝 Isi tweet kamu di sini (nanti aku bantu isi sesuai request kamu)
     const textTweet = `
-Open joki sesuai budget all spess 24/7 𐙚 📚 ☁︎｡
+Jasa ketik/tulis, PPT, Excel, Essay, Artikel, Jurnal, Laporan, Soal, Daftar Pustaka/ Isi, parafrase, Skripsi, Proposal, TOEFL/TOEIC, CV, Desain, DLL. 
 
-tugas soal, skripsi, makalah, proposal, jurnal, laporan, PPT, MYOB, ABSS, Zahir, Brevet Pajak, SAP, BNSP, TOEIC, TOEFL, dll.
-
-AVAIL SEMUA MATPEL/MATKUL ‼️
-
-*promo sertifikasi Accurate CAP cek bio ✨ 
+Avail SD/SMP/SMA/KULIAH ‼️
+Dikerjakan tim minimal S1 🧑‍🎓
+Fee bisa nego, data & privasi 100% aman! 💯
+💌 WA di bio 
 `;
 
     // 📸 Upload 1 gambar dari repo
@@ -36,6 +35,7 @@ AVAIL SEMUA MATPEL/MATKUL ‼️
     console.error('❌ Gagal kirim tweet:', error);
   }
 })();
+
 
 
 
