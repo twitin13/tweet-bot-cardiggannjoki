@@ -1,7 +1,7 @@
 import { TwitterApi } from 'twitter-api-v2';
 import fs from 'fs';
 
-// Ambil environment variables dari GitHub Secrets
+// 🔑 Ambil environment variables dari GitHub Secrets
 const client = new TwitterApi({
   appKey: process.env.TWITTER_API_KEY,
   appSecret: process.env.TWITTER_API_SECRET,
@@ -11,23 +11,25 @@ const client = new TwitterApi({
 
 (async () => {
   try {
-    // 📝 Isi tweet kamu di sini (nanti aku bantu isi sesuai request kamu)
+    // 📝 Isi tweet kamu
     const textTweet = `
-Jasa ketik/tulis, PPT, Excel, Essay, Artikel, Jurnal, Laporan, Soal, Daftar Pustaka/ Isi, parafrase, Skripsi, Proposal, TOEFL/TOEIC, CV, Desain, DLL. 
+Ada yang butuh bahan konten buat affiliate?
 
-Avail SD/SMP/SMA/KULIAH ‼️
-Dikerjakan tim minimal S1 🧑‍🎓
-Fee bisa nego, data & privasi 100% aman! 💯
-💌 WA di bio 
+Bayar 4K-an aja udah dapat 6.000+ konten siap upload + link 🔥 Jadi ga perlu ribet bikin video!
+
+🛒 Cek sini lynk.id/swiftory bisa payment QRIS
+
+t. cara tips info loker freelance wfh Shopee Lazada Tiktok bank kumpulan #zonauang
 `;
 
-    // 📸 Upload 1 gambar dari repo
-    const mediaId = await client.v1.uploadMedia('1.jpg');
+    // 📸 Upload dua gambar
+    const mediaId1 = await client.v1.uploadMedia('1.jpg');
+    const mediaId2 = await client.v1.uploadMedia('2.jpg');
 
-    // 🐦 Kirim tweet dengan teks + gambar
+    // 🐦 Kirim tweet dengan teks + dua gambar
     const tweet = await client.v2.tweet({
       text: textTweet,
-      media: { media_ids: [mediaId] },
+      media: { media_ids: [mediaId1, mediaId2] },
     });
 
     console.log('✅ Tweet terkirim:', tweet.data.id);
@@ -35,7 +37,4 @@ Fee bisa nego, data & privasi 100% aman! 💯
     console.error('❌ Gagal kirim tweet:', error);
   }
 })();
-
-
-
 
