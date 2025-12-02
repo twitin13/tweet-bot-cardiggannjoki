@@ -13,13 +13,13 @@ const client = new TwitterApi({
   try {
     // 📝 Isi tweet kamu
     const textTweet = `
-Ada yang butuh bahan konten buat affiliate?
+Cari freelance / WFH? Affiliate aja gampang banget! 💸 
 
-Bayar 4K-an aja udah dapat 6.000+ konten siap upload + link 🔥 Jadi ga perlu ribet bikin video!
+Mulai 4K-an aja udah dapat TOTAL 6.000+ konten siap upload + link 🔥
 
-🛒 Cek sini lynk.id/swiftory bisa payment QRIS
+🛒 Bisa akses kesini yaa lynk.id/swiftory
 
-t. cara tips info loker freelance wfh Shopee Lazada Tiktok bank kumpulan #zonauang
+t. cara tips info loker Shopee Lazada Tokopedia Tiktok bank kumpulan video
 `;
 
     // 📸 Upload dua gambar
@@ -37,4 +37,5 @@ t. cara tips info loker freelance wfh Shopee Lazada Tiktok bank kumpulan #zonaua
     console.error('❌ Gagal kirim tweet:', error);
   }
 })();
+
 
