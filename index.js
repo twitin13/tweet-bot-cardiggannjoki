@@ -13,7 +13,7 @@ const client = new TwitterApi({
   try {
     // 📝 Isi tweet kamu di sini (nanti aku bantu isi sesuai request kamu)
     const textTweet = `
-ba mariee bermutual #zonauang pls langsung fb
+BA only mutualan yuk?? #zonauang
 `;
 
     // 📸 Upload 1 gambar dari repo
@@ -30,6 +30,7 @@ ba mariee bermutual #zonauang pls langsung fb
     console.error('❌ Gagal kirim tweet:', error);
   }
 })();
+
 
 
 
