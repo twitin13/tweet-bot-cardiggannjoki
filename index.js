@@ -1,7 +1,7 @@
 import { TwitterApi } from 'twitter-api-v2';
 import fs from 'fs';
 
-// 🔑 Ambil environment variables dari GitHub Secrets
+// Ambil environment variables dari GitHub Secrets
 const client = new TwitterApi({
   appKey: process.env.TWITTER_API_KEY,
   appSecret: process.env.TWITTER_API_SECRET,
@@ -11,25 +11,18 @@ const client = new TwitterApi({
 
 (async () => {
   try {
-    // 📝 Isi tweet kamu
+    // 📝 Isi tweet kamu di sini (nanti aku bantu isi sesuai request kamu)
     const textTweet = `
-Cari freelance / WFH? Affiliate aja gampang banget! 💸 
-
-Mulai 4K-an aja udah dapat TOTAL 6.000+ konten siap upload + link 🔥
-
-🛒 Bisa akses kesini yaa lynk.id/swiftory
-
-t. cara tips info loker Shopee Lazada Tokopedia Tiktok bank kumpulan video
+ba mariee bermutual #zonauang pls langsung fb
 `;
 
-    // 📸 Upload dua gambar
-    const mediaId1 = await client.v1.uploadMedia('1.jpg');
-    const mediaId2 = await client.v1.uploadMedia('2.jpg');
+    // 📸 Upload 1 gambar dari repo
+    const mediaId = await client.v1.uploadMedia('1.jpg');
 
-    // 🐦 Kirim tweet dengan teks + dua gambar
+    // 🐦 Kirim tweet dengan teks + gambar
     const tweet = await client.v2.tweet({
       text: textTweet,
-      media: { media_ids: [mediaId1, mediaId2] },
+      media: { media_ids: [mediaId] },
     });
 
     console.log('✅ Tweet terkirim:', tweet.data.id);
@@ -37,5 +30,14 @@ t. cara tips info loker Shopee Lazada Tokopedia Tiktok bank kumpulan video
     console.error('❌ Gagal kirim tweet:', error);
   }
 })();
+
+
+
+
+
+
+
+
+
 
 
