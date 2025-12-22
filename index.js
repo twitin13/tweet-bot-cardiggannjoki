@@ -1,7 +1,5 @@
 import { TwitterApi } from 'twitter-api-v2';
-import fs from 'fs';
 
-// Ambil environment variables dari GitHub Secrets
 const client = new TwitterApi({
   appKey: process.env.TWITTER_API_KEY,
   appSecret: process.env.TWITTER_API_SECRET,
@@ -11,34 +9,27 @@ const client = new TwitterApi({
 
 (async () => {
   try {
-    // 📝 Isi tweet kamu di sini (nanti aku bantu isi sesuai request kamu)
-    const textTweet = `
-BA only mutualan yuk?? #zonauang
-`;
+    // 🧠 List caption
+    const captions = [
+      'BA only mutualan yuk?? #zonauang',
+      'Mutualan yuu BA #zonauang',
+      'ba marie mutualan, rep spess janlup fb #zonauang',
+      'ba asli yu mutualan, ternak gausah dl #zonauang',
+      'moots yu ba, like / rep aja, janlup folbekk #zonauang'
+    ];
 
-    // 📸 Upload 1 gambar dari repo
-    const mediaId = await client.v1.uploadMedia('1.jpg');
+    // 🎲 Ambil caption random
+    const randomCaption =
+      captions[Math.floor(Math.random() * captions.length)];
 
-    // 🐦 Kirim tweet dengan teks + gambar
+    // 🐦 Kirim tweet (TEXT ONLY)
     const tweet = await client.v2.tweet({
-      text: textTweet,
-      media: { media_ids: [mediaId] },
+      text: randomCaption,
     });
 
-    console.log('✅ Tweet terkirim:', tweet.data.id);
+    console.log('✅ Tweet terkirim:', randomCaption);
   } catch (error) {
     console.error('❌ Gagal kirim tweet:', error);
   }
 })();
-
-
-
-
-
-
-
-
-
-
-
 
